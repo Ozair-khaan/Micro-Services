@@ -1,0 +1,12 @@
+server:
+  port: 8761  # Port for the Eureka server to run on
+
+eureka:
+  client:
+    register-with-eureka: false   # The Eureka server does not register itself as a client
+    fetch-registry: false         # The Eureka server does not fetch any registry from other servers
+  
+  server:
+    wait-time-in-ms-when-sync-empty: 0  # Sets the wait time to 0 ms when sync is empty (i.e., no services)
+  instance:
+    hostname: localhost

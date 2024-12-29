@@ -1,0 +1,14 @@
+server:
+  port: 9003
+cloud:
+  gateway:
+    routes:
+      - id: User_service
+        uri: lb://User_service
+        predicate:
+          - "Path=/user/**"
+        
+      - id: contact-service
+        uri: lb://contact-service
+        predicate:
+          - "Path=/contact/**"
